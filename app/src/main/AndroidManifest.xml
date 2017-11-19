@@ -21,7 +21,7 @@
         </activity>
 
         <activity
-            android:name=".MenuActivity"
+            android:name=".SliderAnimationActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>

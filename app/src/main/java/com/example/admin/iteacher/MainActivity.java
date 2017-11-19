@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final Intent intent = new Intent(MainActivity.this, MenuActivity.class);
+                final Intent intent = new Intent(MainActivity.this, SliderAnimationActivity.class);
                 startActivity(intent);
 
             }
