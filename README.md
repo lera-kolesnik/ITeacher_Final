@@ -18,5 +18,5 @@
 ```
 ![001](https://user-images.githubusercontent.com/24829189/32985413-1d3faf0e-cccb-11e7-96c4-9c2a840f9c66.jpeg)
 Проект создан в виде делового помощника для каждого современного учителя. Различные функции приложения помогут преподавателю в составлении расписания, домашнего задания, дополнительных занятий, и не только.
-![001](https://user-images.githubusercontent.com/24829189/32985347-e3b95f60-ccc9-11e7-98c1-d0793344aa6d.jpeg)
+![001](https://user-images.githubusercontent.com/24829189/33032609-c73bf2de-ce32-11e7-8126-3bf8fd983732.jpeg)
 The end.
