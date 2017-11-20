@@ -11,7 +11,7 @@
 
     <array name="icons">
         <item>@drawable/socialnetwork</item>
-        <item>@drawable/teaching</item>
+        <item>@drawable/calendaar</item>
         <item>@drawable/email</item>
         <item>@drawable/homework</item>
 

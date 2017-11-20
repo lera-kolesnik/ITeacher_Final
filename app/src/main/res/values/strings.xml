@@ -10,7 +10,7 @@
 
 
     <string name="email_hint"> Посмотрите список уже зарегистрированных учителей вашей школы </string>
-    <string name="calender_hint"> Посмотрите расписание предметов на неделю </string>
+    <string name="calender_hint"> Добавьте расписание событий на неделю в календарь </string>
     <string name="shopping_hint"> Здесь вы можете создавать беседу учеников, учителей по различным предметам или темам  </string>
     <string name="social_network_hint">  Домашние задания по вашим предметам находятся здесь </string>
     <string name="skip">SKIP</string>
