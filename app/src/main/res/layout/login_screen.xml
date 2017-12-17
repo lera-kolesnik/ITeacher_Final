@@ -26,30 +26,30 @@
         tools:ignore="HardcodedText,MissingConstraints,NotSibling,RtlHardcoded" />
 
     <TextView
-        android:textColor="#bdbdbd"
-        android:textSize="16sp"
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Введите логин и пароль для входа"
         android:layout_marginLeft="74dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="45dp"
+        android:text="Введите имя и пароль для входа"
+        android:textColor="#bdbdbd"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcomeView"
         tools:ignore="HardcodedText,RtlHardcoded" />
 
     <EditText
-        android:background="@drawable/username"
         android:id="@+id/editText"
         android:layout_width="288dp"
         android:layout_height="45dp"
-        android:ems="10"
-        android:paddingLeft="60dp"
-        android:inputType="textPersonName"
-        android:text="Логин или email"
         android:layout_marginLeft="57dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="11dp"
+        android:background="@drawable/username"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingLeft="60dp"
+        android:text="Имя или Логин"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
 
