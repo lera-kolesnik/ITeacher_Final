@@ -1,5 +1,6 @@
 package com.example.admin.iteacher;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -13,6 +14,8 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.example.admin.iteacher.calendar.CalendarActivity;
 
 
 public class SliderAnimationActivity extends AppCompatActivity {
@@ -69,6 +72,8 @@ public class SliderAnimationActivity extends AppCompatActivity {
 
     public class ViewPagerAdapter extends PagerAdapter {
 
+        final private int CALENDAR_POSITION = 1;
+
         private int iconResId, titleArrayResId, hintArrayResId;
 
         public ViewPagerAdapter(int iconResId, int titleArrayResId, int hintArrayResId) {
@@ -103,6 +108,15 @@ public class SliderAnimationActivity extends AppCompatActivity {
             TextView titleView = (TextView)itemView.findViewById(R.id.landing_txt_title);
             TextView hintView = (TextView)itemView.findViewById(R.id.landing_txt_hint);
 
+            if (position == CALENDAR_POSITION) {
+                iconView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        final Intent intent = new Intent(SliderAnimationActivity.this, CalendarActivity.class);
+                        startActivity(intent);
+                    }
+                });
+            }
 
             iconView.setImageDrawable(icon);
             titleView.setText(title);
