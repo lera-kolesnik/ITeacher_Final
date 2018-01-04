@@ -10,28 +10,28 @@
     </array>
 
     <array name="icons">
-        <item>@drawable/teaching</item>
-        <item>@drawable/calendar</item>
-        <item>@drawable/socialnetwork</item>
         <item>@drawable/homework</item>
+        <item>@drawable/calendar</item>
+        <item>@drawable/tester</item>
+        <item>@drawable/literature</item>
 
     </array>
 
     <string-array name="titles" >
 
-        <item>@string/email</item>
+        <item>@string/homework</item>
         <item>@string/calendar</item>
-        <item>@string/dialogs</item>
-        <item>@string/home_work</item>
+        <item>@string/tester</item>
+        <item>@string/literature</item>
 
     </string-array>
 
     <string-array name="hints" >
 
-        <item>@string/email_hint</item>
+        <item>@string/homework_hint</item>
         <item>@string/calendar_hint</item>
-        <item>@string/dialogs_hint</item>
-        <item>@string/home_work_hint</item>
+        <item>@string/tester_hint</item>
+        <item>@string/literature_hint</item>
 
     </string-array>
 
