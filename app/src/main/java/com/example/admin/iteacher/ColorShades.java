@@ -31,43 +31,19 @@ public class ColorShades {
     private float mShade;
 
     public ColorShades setFromColor(int fromColor) {
-        this.mFromColor = fromColor;
+        mFromColor = fromColor;
         return this;
     }
 
     public ColorShades setToColor(int toColor) {
-        this.mToColor = toColor;
+        mToColor = toColor;
         return this;
     }
 
-    public ColorShades setFromColor(String fromColor) {
-
-        this.mFromColor = Color.parseColor(fromColor);
+    public ColorShades setShade(float shade) {
+        mShade = shade;
         return this;
     }
-
-    public ColorShades setToColor(String toColor) {
-        this.mToColor = Color.parseColor(toColor);
-        return this;
-    }
-
-    public ColorShades forLightShade(int color) {
-        setFromColor(Color.WHITE);
-        setToColor(color);
-        return this;
-    }
-
-    public ColorShades forDarkShare(int color) {
-        setFromColor(color);
-        setToColor(Color.BLACK);
-        return this;
-    }
-
-    public ColorShades setShade(float mShade) {
-        this.mShade = mShade;
-        return this;
-    }
-
 
     /**
      * Создает тень для заданного цвета.
@@ -87,58 +63,10 @@ public class ColorShades {
         int diffG = toG - fromG;
         int diffB = toB - fromB;
 
-
-
         int R = fromR + (int) (( diffR * mShade));
         int G = fromG + (int) (( diffG * mShade));
         int B = fromB + (int) (( diffB * mShade));
 
         return  Color.rgb(R, G, B);
-
     }
-
-
-    /**
-     * Предполагаетcя, что цвет до и цвет после инвертируются(это перечисление уже заданных цветов в программе) перед генерированием тени.
-     * @return значение int инвертированного оттенка.
-     */
-    public int generateInverted() {
-
-        int fromR = (Color.red(mFromColor));
-        int fromG = (Color.green(mFromColor));
-        int fromB = (Color.blue(mFromColor));
-
-        int toR = (Color.red(mToColor));
-        int toG = (Color.green(mToColor));
-        int toB = (Color.blue(mToColor));
-
-
-        int diffR = toR - fromR;
-        int diffG = toG - fromG;
-        int diffB = toB - fromB;
-
-        int R = toR - (int) (( diffR * mShade));
-        int G = toG - (int) (( diffG * mShade));
-        int B = toB - (int) (( diffB * mShade));
-
-        return  Color.rgb(R, G, B);
-
-    }
-
-    /**
-     * Получает строковый эквивалент сгенерированного оттенка
-     * @return строковое значение тени
-     */
-    public String generateInvertedString() {
-        return String.format("#%06X", 0xFFFFFF & generateInverted());
-    }
-
-    /**
-     * Тоже получает инвертированный строковый эквивалент сгенерированного оттенка
-     * @return строковое значение тени тоже
-     */
-    public String generateString() {
-        return String.format("#%06X", 0xFFFFFF & generate());
-    }
-
 }

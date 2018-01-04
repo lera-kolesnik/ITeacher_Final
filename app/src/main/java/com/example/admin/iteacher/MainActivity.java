@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 final Intent intent = new Intent(MainActivity.this, SliderAnimationActivity.class);
                 startActivity(intent);
-
             }
         });
     }
