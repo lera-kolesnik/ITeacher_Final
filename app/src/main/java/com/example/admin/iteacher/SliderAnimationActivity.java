@@ -74,18 +74,17 @@ public class SliderAnimationActivity extends AppCompatActivity {
 
         final private int CALENDAR_POSITION = 1;
 
-        private int iconResId, titleArrayResId, hintArrayResId;
+        private int mIconResId, mTitleArrayResId, mHintArrayResId;
 
         public ViewPagerAdapter(int iconResId, int titleArrayResId, int hintArrayResId) {
-
-            this.iconResId = iconResId;
-            this.titleArrayResId = titleArrayResId;
-            this.hintArrayResId = hintArrayResId;
+            mIconResId = iconResId;
+            mTitleArrayResId = titleArrayResId;
+            mHintArrayResId = hintArrayResId;
         }
 
         @Override
         public int getCount() {
-            return getResources().getIntArray(iconResId).length;
+            return getResources().getIntArray(mIconResId).length;
         }
 
         @Override
@@ -96,17 +95,15 @@ public class SliderAnimationActivity extends AppCompatActivity {
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
 
-            Drawable icon = getResources().obtainTypedArray(iconResId).getDrawable(position);
-            String title = getResources().getStringArray(titleArrayResId)[position];
-            String hint = getResources().getStringArray(hintArrayResId)[position];
-
+            Drawable icon = getResources().obtainTypedArray(mIconResId).getDrawable(position);
+            String title = getResources().getStringArray(mTitleArrayResId)[position];
+            String hint = getResources().getStringArray(mHintArrayResId)[position];
 
             View itemView = getLayoutInflater().inflate(R.layout.viewpager_item, container, false);
 
-
-            ImageView iconView = (ImageView) itemView.findViewById(R.id.landing_img_slide);
-            TextView titleView = (TextView)itemView.findViewById(R.id.landing_txt_title);
-            TextView hintView = (TextView)itemView.findViewById(R.id.landing_txt_hint);
+            ImageView iconView = itemView.findViewById(R.id.landing_img_slide);
+            TextView titleView = itemView.findViewById(R.id.landing_txt_title);
+            TextView hintView = itemView.findViewById(R.id.landing_txt_hint);
 
             if (position == CALENDAR_POSITION) {
                 iconView.setOnClickListener(new View.OnClickListener() {
@@ -130,12 +127,10 @@ public class SliderAnimationActivity extends AppCompatActivity {
         @Override
         public void destroyItem(ViewGroup container, int position, Object object) {
             container.removeView((RelativeLayout) object);
-
         }
     }
 
     public class CustomPageTransformer implements ViewPager.PageTransformer {
-
 
         public void transformPage(View view, float position) {
             int pageWidth = view.getWidth();
@@ -190,8 +185,7 @@ public class SliderAnimationActivity extends AppCompatActivity {
 
 
     private void setAlpha(View view, float alpha) {
-
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB && ! isSliderAnimation) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB && ! isSliderAnimation) {
             view.setAlpha(alpha);
         }
     }
@@ -201,14 +195,14 @@ public class SliderAnimationActivity extends AppCompatActivity {
      * @param translationX - значение translationX .
      */
     private void setTranslationX(View view, float translationX) {
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB && ! isSliderAnimation) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB && ! isSliderAnimation) {
             view.setTranslationX(translationX);
         }
     }
 
     public void onSaveInstanceState(Bundle outstate) {
 
-        if(outstate != null) {
+        if (outstate != null) {
             outstate.putBoolean(SAVING_STATE_SLIDER_ANIMATION,isSliderAnimation);
         }
 
@@ -217,10 +211,10 @@ public class SliderAnimationActivity extends AppCompatActivity {
 
     public void onRestoreInstanceState(Bundle inState) {
 
-        if(inState != null) {
+        if (inState != null) {
             isSliderAnimation = inState.getBoolean(SAVING_STATE_SLIDER_ANIMATION,false);
         }
-        super.onRestoreInstanceState(inState);
 
+        super.onRestoreInstanceState(inState);
     }
 }
