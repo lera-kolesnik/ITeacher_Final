@@ -47,5 +47,6 @@ dependencies {
             "com.android.support:design:$supportVersion",
             "com.squareup.retrofit2:retrofit:$retrofit2Version",
             "com.squareup.retrofit2:converter-gson:$retrofit2Version"
+    compile group: 'com.google.guava', name: 'guava', version: '15.0'
     testCompile 'junit:junit:4.12'
 }
